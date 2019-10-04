@@ -38,3 +38,34 @@
 9. Assign changes to a commit hash: `git commit -m "Initial Ionic/Angular app."`
 10. Push project to GitHub: `git push origin master`
 
+<br>
+
+## Ionic Generate Commands
+    Notes:  Ensure Angular CLI has been installed.  Under the hood Ionic utilizes the Angular CLI to generate Angular framework features. 
+
+| Angular Framework Features | Usage |
+| -------------------------- | ---- |
+| Component | `ionic g component my-new-component` |
+| Directive | `ionic g directive my-new-directive` |
+| Enum      | `ionic g enum my-new-enum` |
+| Guard     | `ionic g guard services/my-new-guard`|
+| Interface | `ionic g interface my-new-interface` |
+| Module    | `ionic g module my-new-module` |
+| Page      | `ionic g page pages/my-new-page` |
+| Pipe      | `ionic g pipe my-new-pipe` |
+| Service   | `ionic g service my-new-service` |
+
+<br>
+
+## References
+
+|Name|URL|
+|----|---|
+|Medium|https://medium.com|
+|Ionic Academy|https://ionicacademy.com|
+|Ionic Theme|https://ionicthemes.com/tutorials|
+|Alligator IO|https://alligator.io|
+|Gajotres|https://www.gajotres.net|
+|SitePoint|https://www.sitepoint.com/svelte-news-app-build|
+|FreakyJolly| https://www.freakyjolly.com|
+
