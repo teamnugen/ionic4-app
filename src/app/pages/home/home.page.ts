@@ -18,6 +18,7 @@ export class HomePage {
     constructor() {
         this.pages = [
             { name: "Home Page", icon: "home", url: "/home" },
+            { name: "Ionic Selectable", icon: "cube", url: "/ionic-selectable" },
         ];
     }
 

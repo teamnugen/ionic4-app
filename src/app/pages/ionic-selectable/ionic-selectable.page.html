@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Ionic Selectable</ion-title>
+
+      <ion-buttons slot="end">
+          <ion-button fill="outline" color="success">
+              <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+              Add Skills
+              <!-- <ionic-selectable [(ngModel)]="selectedPorts" [items]="ports" itemValueField="id" itemTextField="name" [canClear]="true"
+                  [canSearch]="true" [isMultiple]="true" (onChange)="portChange($event)">
+                  <ng-template ionicSelectableCloseButtonTemplate>
+                      <ion-icon name="close-circle" style="font-size: 24px;"></ion-icon>
+                  </ng-template>
+                  <ng-template ionicSelectableItemIconTemplate let-port="item" let-isPortSelected="isItemSelected">
+                      <ion-icon [name]="isPortSelected ? 'checkmark-circle' : 'radio-button-off'" [color]="isPortSelected ? 'primary' : null">
+                      </ion-icon>
+                  </ng-template>
+              </ionic-selectable> -->
+          </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button fill="outline">
+      <!-- <ion-item> -->
+          <ion-label>Skills</ion-label>
+          <ionic-selectable [(ngModel)]="selectedSkills" [items]="skills" itemValueField="id" itemTextField="name" [canClear]="true"
+              [canSearch]="true" [isMultiple]="true" (onChange)="onSkillChange($event)">
+              <ng-template ionicSelectableCloseButtonTemplate>
+                  <ion-icon name="close-circle" style="font-size: 24px;"></ion-icon>
+              </ng-template>
+              <ng-template ionicSelectableItemIconTemplate let-port="item" let-isPortSelected="isItemSelected">
+                  <ion-icon [name]="isPortSelected ? 'checkmark-circle' : 'radio-button-off'" [color]="isPortSelected ? 'primary' : null">
+                  </ion-icon>
+              </ng-template>
+          </ionic-selectable>
+      <!-- </ion-item> -->
+  </ion-button>
+
+
+  <ion-list *ngIf="selectedSkills && selectedSkills.length > 0">
+      <ion-list-header color="success">
+          <h2> Selected Skills </h2>
+      </ion-list-header>
+      <ion-item *ngFor="let p of selectedSkills">
+          <h3> {{p.name}} </h3>
+      </ion-item>
+  </ion-list>
+</ion-content>

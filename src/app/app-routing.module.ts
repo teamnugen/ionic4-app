@@ -4,6 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+    { path: 'ionic-selectable', loadChildren: './pages/ionic-selectable/ionic-selectable.module#IonicSelectablePageModule' },
 ];
 
 @NgModule({
