@@ -19,6 +19,7 @@ export class HomePage {
         this.pages = [
             { name: "Home Page", icon: "home", url: "/home" },
             { name: "Ionic Selectable", icon: "cube", url: "/ionic-selectable" },
+            { name: "Radio Example", icon: "cube", url: "/radio" },
         ];
     }
 

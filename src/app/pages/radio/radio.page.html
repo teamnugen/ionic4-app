@@ -1,0 +1,113 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Ionic 4 Radio Example
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!-- <ion-list>
+        <ion-list-header>
+            <ion-label>Name</ion-label>
+        </ion-list-header>
+        <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)" #radioGroup>
+            <ion-item *ngFor="let item of radio_list" (ionSelect)="radioSelect($event)">
+                <ion-label>{{item.text}}</ion-label>
+                <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" color="{{item.color}}"
+                    disabled="{{item.disabled}}"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list> -->
+
+    <form [formGroup]="campaignForm" (ngSubmit)="onSubmit(campaignForm.value)" class="ion-padding">
+        <ion-grid>
+            <ion-row>
+                <ion-col class="ion-no-padding">
+                    <ion-item>
+                        <ion-label position="floating" color="danger">Name (* Required field)</ion-label>
+                        <ion-input type="text" maxlength="50" placeholder="* Required field" formControlName="name"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-no-padding">
+                    <ion-radio-group formControlName="recipientType" (ionChange)="radioGroupChange($event)">
+                        <ion-label class="title">Send to:</ion-label>
+                        <ion-item *ngFor="let recipient of recipientTypes">
+                            <ion-label>{{recipient.text}}</ion-label>
+                            <ion-radio slot="start" value="{{recipient.text}}" checked="{{recipient.checked}}"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-button expand="block" color="warning" (click)="reset()">
+                        <ion-icon slot="start" name="undo"></ion-icon> Clear
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button expand="block" color="success" type="submit">
+                        <ion-icon slot="start" name="save"></ion-icon> Save
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+
+    <!-- <ion-item>
+        <ion-radio-group name="radio-group" (ionChange)="radioGroupChange($event)">
+            <ion-row>
+                <ion-col no-padding>
+                    <ion-item lines="none">
+                        <ion-label>Required</ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col no-padding>
+                    <ion-item lines="none">
+                        <ion-label>No</ion-label>
+                        <ion-radio slot="start" value="No" checked="true" color="warning" no-padding></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col no-padding>
+                    <ion-label padding>&nbsp;</ion-label>
+                </ion-col>
+                <ion-col no-padding>
+                    <ion-item lines="none" no-padding>
+                        <ion-label>Yes</ion-label>
+                        <ion-radio slot="start" value="Yes" checked="false" color="success" no-padding></ion-radio>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-radio-group>
+    </ion-item>
+
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Name</ion-label>
+        </ion-list-header>
+        <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)" #radioGroup>
+            <ion-item *ngFor="let item of radio_list" (ionFocus)="radioFocus()" (ionSelect)="radioSelect($event)" (ionBlur)="radioBlur()">
+                <ion-label>{{item.text}}</ion-label>
+                <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" color="{{item.color}}"
+                    disabled="{{item.disabled}}"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+
+    <p>
+        <b>Radio Group Event</b>
+        <br />
+        {{selectedRadioGroup | json}}
+    </p>
+    <p><b>Radio Item Event</b><br />
+        {{selectedRadioItem | json}}
+    </p> -->
+</ion-content>
