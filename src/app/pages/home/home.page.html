@@ -7,7 +7,7 @@
 <ion-content>
     <ion-list *ngIf="pages">
         <ion-list-header color="success">
-            <h2> Pages </h2>
+            <h2> Ionic 4 Examples </h2>
         </ion-list-header>
         <ion-item *ngFor="let p of pages" detail="true" [routerLink]="[p.url]">
             <ion-icon slot="start" [name]="p.icon"></ion-icon>

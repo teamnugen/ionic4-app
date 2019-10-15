@@ -17,10 +17,10 @@ export class HomePage {
 
     constructor() {
         this.pages = [
-            { name: "Home Page", icon: "home", url: "/home" },
-            { name: "Ionic Selectable", icon: "cube", url: "/ionic-selectable" },
-            { name: "Radio Example", icon: "cube", url: "/radio" },
+            // { name: "Home Page", icon: "home", url: "/home" },
+            { name: "Ionic Selectable Exmaple", icon: "cube", url: "/ionic-selectable" },
+            { name: "Radio Group Example", icon: "radio-button-on", url: "/radio" },
+            { name: "Login and Role-based Authentication Example", icon: "lock", url: "/login" },
         ];
     }
-
 }
